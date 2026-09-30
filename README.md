@@ -145,11 +145,11 @@ PostgreSQL
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=tutor_ai
-POSTGRES_HOST=localhost
-POSTGRES_PORT=5433
+POSTGRES_HOST=db
+POSTGRES_PORT=5432
 DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
 ```
 
 Приложение загружает конфигурацию из `.env` через Pydantic Settings.
 
-При запуске через Docker Compose приложение подключается к PostgreSQL по адресу db:5432. Значения POSTGRES_HOST и POSTGRES_PORT из .env для контейнера приложения переопределяются в docker-compose.yml.
+При запуске через Docker Compose приложение подключается к PostgreSQL по адресу db:5432.
